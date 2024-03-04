@@ -1,4 +1,4 @@
-@startuml
+@startuml Vrai/Faux
 
 class Professeur
 
@@ -8,8 +8,10 @@ class Cours
 
 class Etudiant
 
-Professeur "1" -- "*" Discipline
-(Professeur, Discipline) .. Cours
+<> diamond
+Professeur "1" -- diamond
+diamond -- "*" Discipline
+diamond - Cours
 Etudiant "5..30" -- "*" Cours
 
 @enduml
